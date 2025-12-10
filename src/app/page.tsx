@@ -34,7 +34,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import PurchaseNotification from "@/components/landing-page/purchase-notification";
 import SpecialOfferPopup from "@/components/landing-page/special-offer-popup";
 
 const categories = [
@@ -267,7 +266,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
-                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground animate-pulse">
+                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground">
                                 Eu quero o acesso premium!
                                 <PartyPopper className="ml-2" />
                             </Button>
@@ -363,8 +362,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <PurchaseNotification />
 
       <SpecialOfferPopup
         open={isOfferPopupOpen}

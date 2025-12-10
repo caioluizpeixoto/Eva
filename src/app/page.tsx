@@ -120,7 +120,7 @@ export default function Home() {
               Você está <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">
-              O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10,00</span>
+              O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$9,99</span>
             </p>
             <div className="max-w-4xl mx-auto my-8 aspect-video bg-secondary rounded-lg flex items-center justify-center border-4 border-muted shadow-lg animate-zoom-in">
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
@@ -128,7 +128,6 @@ export default function Home() {
             <a href="#planos">
               <Button size="lg" className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
                 VER OS PLANOS
-                <PartyPopper className="ml-2" />
               </Button>
             </a>
           </div>
@@ -307,17 +306,19 @@ export default function Home() {
         </section>
 
         {/* Final CTA Section */}
-        <section id="cta-final" className="py-24 text-center bg-primary">
-           <div className="container px-4 mx-auto">
-             <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-8">
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">Pronta para Desbloquear Sua Criatividade?</span>
-             </h2>
-              <a href="#planos">
-               <Button size="lg" className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
-                Quero Meus Moldes! <PartyPopper className="ml-2" />
-               </Button>
-             </a>
-           </div>
+        <section id="cta-final" className="py-16 md:py-24 bg-background">
+          <div className="container px-4 mx-auto">
+            <Card className="max-w-3xl mx-auto p-8 md:p-12 text-center shadow-2xl bg-card">
+                <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8">
+                Pronta para desafiar sua criatividade?
+                </h2>
+                <a href="#planos">
+                <Button size="lg" className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
+                    Quero Meus Moldes! <PartyPopper className="ml-2" />
+                </Button>
+                </a>
+            </Card>
+          </div>
         </section>
       </main>
 

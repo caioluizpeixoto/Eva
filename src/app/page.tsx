@@ -128,24 +128,24 @@ export default function Home() {
 
   React.useEffect(() => {
     let lastScrollY = window.scrollY;
-    let ticking = false;
 
     const handleScroll = () => {
-      lastScrollY = window.scrollY;
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setIsHeaderVisible(lastScrollY === 0);
-          ticking = false;
-        });
-        ticking = true;
+      const currentScrollY = window.scrollY;
+      if (currentScrollY === 0) {
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+        // Hide header on scroll down
+        setIsHeaderVisible(false);
       }
+      lastScrollY = currentScrollY;
     };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isHeaderVisible]);
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -169,7 +169,7 @@ export default function Home() {
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
             </div>
             <a href="#planos">
-              <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+              <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground">
                 VER OS PLANOS
               </Button>
             </a>
@@ -189,9 +189,9 @@ export default function Home() {
                   <p className="font-semibold text-foreground">{category.name}</p>
                 </div>
               ))}
-            </div>
-            <div className="text-center mt-8 animate-fade-in-up">
-                <p className="font-semibold text-foreground">E muito mais!</p>
+                <div className="flex flex-col items-center gap-3 animate-fade-in-up">
+                  <p className="font-semibold text-foreground mt-12">E muito mais!</p>
+                </div>
             </div>
           </div>
         </section>
@@ -361,7 +361,7 @@ export default function Home() {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">Pronta para desafiar sua criatividade?</span>
                 </h2>
                 <a href="#planos">
-                <Button size="lg" className="text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
+                <Button size="lg" className="text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground animate-pulse">
                     Quero Meus Moldes! <PartyPopper className="ml-2" />
                 </Button>
                 </a>
@@ -385,3 +385,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

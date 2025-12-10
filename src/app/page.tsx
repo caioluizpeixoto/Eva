@@ -203,14 +203,13 @@ export default function Home() {
                             </ul>
                              <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-base py-6 rounded-lg">
                                 Comprar Agora
-                                <PartyPopper className="ml-2" />
                             </Button>
                         </CardContent>
                     </Card>
 
                     {/* Premium Plan */}
                     <Card className="w-full max-w-sm shadow-2xl border-2 border-primary rounded-2xl bg-card text-card-foreground relative">
-                         <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1.5 text-sm font-bold rounded-full flex items-center gap-2">
+                         <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground px-4 py-1.5 text-sm font-bold rounded-full flex items-center gap-2">
                             <Crown className="w-4 h-4" /> MAIS VENDIDO
                         </Badge>
                         <CardHeader className="text-center pb-4 pt-8">
@@ -235,6 +234,7 @@ export default function Home() {
                             </ul>
                            <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-base py-6 rounded-lg">
                                 Eu quero o acesso premium!
+                                <PartyPopper className="ml-2" />
                             </Button>
                         </CardContent>
                     </Card>

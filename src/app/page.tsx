@@ -127,11 +127,17 @@ export default function Home() {
   };
 
   React.useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsHeaderVisible(false);
-      } else {
-        setIsHeaderVisible(true);
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsHeaderVisible(lastScrollY === 0);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -163,7 +169,7 @@ export default function Home() {
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
             </div>
             <a href="#planos">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+              <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
                 VER OS PLANOS
               </Button>
             </a>
@@ -234,7 +240,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
-                             <Button size="lg" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-base py-6 rounded-lg" onClick={() => setIsOfferPopupOpen(true)}>
+                             <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg" onClick={() => setIsOfferPopupOpen(true)}>
                                 Comprar Agora
                             </Button>
                         </CardContent>
@@ -267,7 +273,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
-                           <Button size="lg" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-base py-6 rounded-lg animate-pulse">
+                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg animate-pulse">
                                 Eu quero o acesso premium!
                                 <PartyPopper className="ml-2" />
                             </Button>
@@ -355,7 +361,7 @@ export default function Home() {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">Pronta para desafiar sua criatividade?</span>
                 </h2>
                 <a href="#planos">
-                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
+                <Button size="lg" className="text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
                     Quero Meus Moldes! <PartyPopper className="ml-2" />
                 </Button>
                 </a>

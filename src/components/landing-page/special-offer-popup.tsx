@@ -40,7 +40,7 @@ export default function SpecialOfferPopup({ open, onOpenChange, onAccept, onDecl
             <Button 
                 onClick={onAccept}
                 size="lg" 
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-base py-6 rounded-lg animate-pulse"
+                className="w-full font-bold text-base py-6 rounded-lg animate-pulse"
             >
                 Sim, eu quero o Acesso Premium!
                 <PartyPopper className="ml-2" />

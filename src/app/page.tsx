@@ -119,7 +119,7 @@ export default function Home() {
               O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
             </p>
             <div className="max-w-4xl mx-auto my-8 aspect-w-9 aspect-h-16 md:aspect-w-3 md:aspect-h-4 bg-secondary rounded-lg flex items-center justify-center border-4 border-muted shadow-lg animate-zoom-in overflow-hidden">
-              <iframe src="https://player.vimeo.com/video/1145406928?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1440" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" title="Kit 2 Mil Moldes de EVA - Oferta Especial" className="w-full h-full"></iframe>
+              <iframe src="https://player.vimeo.com/video/1145406928?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" title="Kit 2 Mil Moldes de EVA - Oferta Especial" className="absolute top-0 left-0 w-full h-full"></iframe>
             </div>
             <a href="#planos">
               <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">

@@ -127,17 +127,11 @@ export default function Home() {
   };
 
   React.useEffect(() => {
-    let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY === 0) {
-        setIsHeaderVisible(true);
-      } else if (currentScrollY > lastScrollY && isHeaderVisible) {
-        // Hide header on scroll down
-        setIsHeaderVisible(false);
+      const isTop = window.scrollY < 50;
+      if (isTop !== isHeaderVisible) {
+        setIsHeaderVisible(isTop);
       }
-      lastScrollY = currentScrollY;
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -163,7 +157,7 @@ export default function Home() {
               Você está <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">
-              O kit com mais de <span className="font-bold text-primary">3 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
+              O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
             </p>
             <div className="max-w-4xl mx-auto my-8 aspect-video bg-secondary rounded-lg flex items-center justify-center border-4 border-muted shadow-lg animate-zoom-in">
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
@@ -189,8 +183,8 @@ export default function Home() {
                   <p className="font-semibold text-foreground">{category.name}</p>
                 </div>
               ))}
-                <div className="flex flex-col items-center gap-3 animate-fade-in-up">
-                  <p className="font-semibold text-foreground mt-12">E muito mais!</p>
+                <div className="flex flex-col items-center gap-3 animate-fade-in-up justify-center col-span-full md:col-span-1">
+                  <p className="font-semibold text-foreground mt-0">E muito mais!</p>
                 </div>
             </div>
           </div>
@@ -236,7 +230,7 @@ export default function Home() {
                         <CardContent className="space-y-4 p-6 pt-2">
                             <ul className="space-y-3 text-sm">
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Acesso vitalício</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> 3000+ moldes</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> 2000+ moldes</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
@@ -385,5 +379,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

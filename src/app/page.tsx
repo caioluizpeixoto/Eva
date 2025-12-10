@@ -1,3 +1,6 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
 import {
   BadgeCheck,
@@ -105,11 +108,30 @@ const kitContents = [
 ];
 
 export default function Home() {
+  const [isHeaderVisible, setIsHeaderVisible] = React.useState(true);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsHeaderVisible(false);
+      } else {
+        setIsHeaderVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold">
-        ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
-      </header>
+      {isHeaderVisible && (
+        <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold">
+          ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
+        </header>
+      )}
       
       <main className="flex-grow">
         {/* Hero Section */}
@@ -119,7 +141,7 @@ export default function Home() {
               Você está <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">
-              O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
+              O kit com mais de <span className="font-bold text-primary">3 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
             </p>
             <div className="max-w-4xl mx-auto my-8 aspect-video bg-secondary rounded-lg flex items-center justify-center border-4 border-muted shadow-lg animate-zoom-in">
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
@@ -192,11 +214,11 @@ export default function Home() {
                         <CardContent className="space-y-4 p-6 pt-2">
                             <ul className="space-y-3 text-sm">
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Acesso vitalício</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> 2000+ moldes</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> 3000+ moldes</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
-                             <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-base py-6 rounded-lg">
+                             <Button size="lg" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-base py-6 rounded-lg">
                                 Comprar Agora
                             </Button>
                         </CardContent>
@@ -229,7 +251,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
-                           <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-base py-6 rounded-lg">
+                           <Button size="lg" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-base py-6 rounded-lg animate-pulse">
                                 Eu quero o acesso premium!
                                 <PartyPopper className="ml-2" />
                             </Button>
@@ -283,7 +305,6 @@ export default function Home() {
                   </li>
                 ))}
                  <li className="flex items-start gap-3 md:col-span-2 md:justify-center">
-                    <MoreHorizontal className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <span className="font-semibold text-foreground">E muito mais</span>
                       <span className="text-muted-foreground ml-1">centenas de outros modelos exclusivos</span>
@@ -314,11 +335,11 @@ export default function Home() {
         <section id="cta-final" className="py-16 md:py-24 bg-background">
           <div className="container px-4 mx-auto">
             <Card className="max-w-3xl mx-auto p-8 md:p-12 text-center shadow-2xl bg-card">
-                <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8">
-                Pronta para desafiar sua criatividade?
+                <h2 className="text-3xl md:text-5xl font-bold mb-8">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">Pronta para desafiar sua criatividade?</span>
                 </h2>
                 <a href="#planos">
-                <Button size="lg" className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
+                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
                     Quero Meus Moldes! <PartyPopper className="ml-2" />
                 </Button>
                 </a>
@@ -335,3 +356,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
+
+    

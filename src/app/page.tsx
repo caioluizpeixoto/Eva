@@ -290,7 +290,7 @@ export default function Home() {
            <div className="container px-4 mx-auto">
              <h2 className="text-3xl md:text-5xl font-bold text-background mb-8">Pronta para Desbloquear Sua Criatividade?</h2>
               <a href="#planos">
-               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-2xl font-bold py-8 px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
+               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
                 Quero Meus Moldes! 🎨
                </Button>
              </a>

@@ -240,7 +240,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
-                             <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg" onClick={() => setIsOfferPopupOpen(true)}>
+                             <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground" onClick={() => setIsOfferPopupOpen(true)}>
                                 Comprar Agora
                             </Button>
                         </CardContent>
@@ -273,7 +273,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
-                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg">
+                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground animate-pulse">
                                 Eu quero o acesso premium!
                                 <PartyPopper className="ml-2" />
                             </Button>
@@ -380,7 +380,7 @@ export default function Home() {
       />
 
       <footer className="text-center p-6 bg-secondary/50">
-        <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} EVA Template Pro. Todos os direitos reservados.</p>
+        <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Hellen Criativa. Todos os direitos reservados.</p>
       </footer>
     </div>
   );

@@ -233,7 +233,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Seu Lobato</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> Bônus Exclusivos</li>
                             </ul>
-                           <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base py-6 rounded-lg">
+                           <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-base py-6 rounded-lg">
                                 Eu quero o acesso premium!
                             </Button>
                         </CardContent>
@@ -278,7 +278,7 @@ export default function Home() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 {kitContents.map((content) => (
                   <li key={content.item} className="flex items-start gap-3">
-                    <content.icon className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                    <content.icon className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <span className="font-semibold text-foreground">{content.item}</span>
                       <span className="text-muted-foreground ml-1">{content.details}</span>
@@ -293,8 +293,8 @@ export default function Home() {
         {/* Guarantee Section */}
         <section id="garantia" className="py-16 md:py-24">
           <div className="container px-4 mx-auto">
-            <div className="max-w-3xl mx-auto border-4 border-dashed border-accent rounded-lg p-8 md:p-12 text-center bg-accent/5">
-              <ShieldCheck className="w-16 h-16 text-accent mx-auto mb-6" />
+            <div className="max-w-3xl mx-auto border-4 border-dashed border-primary rounded-lg p-8 md:p-12 text-center bg-primary/5">
+              <ShieldCheck className="w-16 h-16 text-primary mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Sua Compra com Risco Zero!</h2>
               <p className="text-lg text-muted-foreground mb-2">
                 Você tem <span className="font-bold">7 dias para testar</span> nosso kit completo.

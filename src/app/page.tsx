@@ -65,6 +65,7 @@ const benefits = [
 
 const feedbackImages = [
     'https://i.postimg.cc/WbyMprxW/Captura-de-tela-2025-12-10-194110.png',
+    'https://i.postimg.cc/DyNqfsR6/Captura-de-tela-2025-12-10-194126.png',
 ];
 
 const kitContents = [

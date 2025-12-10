@@ -102,7 +102,6 @@ const kitContents = [
   { item: "Natal", details: "papai noel, renas, árvores e mais", icon: Gift },
   { item: "Páscoa", details: "coelhos, ovos e cenouras", icon: Rabbit },
   { item: "Formas", details: "(corações, estrelas e geográficas)", icon: Shapes },
-  { item: "E muito mais", details: "centenas de outros modelos exclusivos", icon: MoreHorizontal },
 ];
 
 export default function Home() {
@@ -120,7 +119,7 @@ export default function Home() {
               Você está <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">
-              O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$9,99</span>
+              O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
             </p>
             <div className="max-w-4xl mx-auto my-8 aspect-video bg-secondary rounded-lg flex items-center justify-center border-4 border-muted shadow-lg animate-zoom-in">
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
@@ -184,7 +183,7 @@ export default function Home() {
                          <CardHeader className="text-center pb-4 pt-8">
                             <CardTitle className="text-2xl font-bold">Acesso Imediato</CardTitle>
                              <p className="text-4xl font-bold text-primary pt-2">
-                                R$9<span className="text-2xl align-super">,99</span>
+                                R$10
                             </p>
                             <CardDescription className="text-sm">
                                 Pagamento único
@@ -283,6 +282,13 @@ export default function Home() {
                     </div>
                   </li>
                 ))}
+                 <li className="flex items-start gap-3 md:col-span-2 md:justify-center">
+                    <MoreHorizontal className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <span className="font-semibold text-foreground">E muito mais</span>
+                      <span className="text-muted-foreground ml-1">centenas de outros modelos exclusivos</span>
+                    </div>
+                  </li>
               </ul>
             </div>
           </div>

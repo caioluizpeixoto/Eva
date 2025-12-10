@@ -37,7 +37,7 @@ const PurchaseNotification = () => {
         // Subsequent notifications
         const interval = setInterval(() => {
             showRandomNotification();
-        }, 12000); // Show a new notification every 12 seconds
+        }, 20000); // Show a new notification every 20 seconds
         
         return () => clearInterval(interval);
     }, 5000);

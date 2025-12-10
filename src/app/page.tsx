@@ -92,7 +92,7 @@ export default function Home() {
     // Lógica para redirecionar para o checkout premium
     console.log("Oferta aceita! Redirecionando para checkout premium.");
     setIsOfferPopupOpen(false);
-    window.location.href = 'https://pay.kirvano.com/3dd7c081-3c48-4395-9776-8051c5b81f18'; // Link de checkout premium
+    window.location.href = 'https://www.ggcheckout.com/checkout/v2/j9fOwvGnp0BnprQYScTg'; // Link de checkout premium
   };
 
   const handleDeclineOffer = () => {

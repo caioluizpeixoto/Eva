@@ -181,70 +181,58 @@ export default function Home() {
         {/* Pricing Section */}
         <section id="planos" className="py-16 md:py-24 bg-secondary">
             <div className="container px-4 mx-auto">
-                <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+                <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
                     {/* Basic Plan */}
-                    <Card className="w-full max-w-md shadow-lg transform lg:scale-95">
-                        <CardHeader className="text-center pb-2">
-                            <CardTitle className="text-3xl font-bold">Plano Básico</CardTitle>
-                            <CardDescription className="text-lg pt-2">
-                                <span className="line-through text-muted-foreground">De R$97,00</span>
-                            </CardDescription>
-                            <p className="text-sm text-muted-foreground">Por apenas</p>
-                            <p className="text-5xl font-bold text-primary">
-                                R$10<span className="text-3xl align-super">,00</span>
+                    <Card className="w-full max-w-sm shadow-lg rounded-2xl bg-white text-gray-800">
+                         <CardHeader className="text-center pb-4 pt-8">
+                            <CardTitle className="text-2xl font-bold">Acesso Imediato</CardTitle>
+                             <p className="text-4xl font-bold text-primary pt-2">
+                                R$10<span className="text-2xl align-super">,00</span>
                             </p>
-                            <p className="text-sm text-muted-foreground">pagamento único</p>
+                            <CardDescription className="text-sm">
+                                Pagamento único
+                            </CardDescription>
                         </CardHeader>
-                        <CardContent className="space-y-4 pt-4">
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> Acesso vitalício</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> 2000+ moldes</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> Downloads ilimitados</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> Garantia de 7 dias</li>
+                        <CardContent className="space-y-4 p-6 pt-2">
+                            <ul className="space-y-3 text-sm">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Acesso vitalício</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> 2000+ moldes</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
-                            <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6">
-                                Garantir Meu Acesso Agora!
+                             <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-base py-6 rounded-lg">
+                                Comprar Agora
                             </Button>
                         </CardContent>
                     </Card>
 
                     {/* Premium Plan */}
-                    <Card className="w-full max-w-md shadow-2xl border-2 border-primary relative overflow-visible transform lg:scale-105">
-                        <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-400 to-red-500 text-white px-4 py-1.5 text-sm font-bold rounded-full flex items-center gap-2">
+                    <Card className="w-full max-w-sm shadow-2xl border-2 border-primary rounded-2xl bg-white text-gray-800 relative">
+                         <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1.5 text-sm font-bold rounded-full flex items-center gap-2">
                             <Crown className="w-4 h-4" /> MAIS VENDIDO
                         </Badge>
-                        <CardHeader className="text-center pt-10 pb-2">
-                            <CardTitle className="text-3xl font-bold">Premium</CardTitle>
-                            <CardDescription className="text-lg pt-2">
-                                <span className="line-through text-muted-foreground">De R$197,00</span>
+                        <CardHeader className="text-center pb-4 pt-8">
+                            <CardTitle className="text-2xl font-bold">Acesso Premium</CardTitle>
+                           <p className="text-4xl font-bold text-primary pt-2">
+                                R$29<span className="text-2xl align-super">,90</span>
+                            </p>
+                            <CardDescription className="text-sm">
+                                Pagamento único
                             </CardDescription>
-                            <p className="text-sm text-muted-foreground">Por apenas</p>
-                            <div>
-                                <span className="text-5xl font-bold text-primary align-middle">R$ 29</span>
-                                <span className="text-3xl font-bold text-primary align-super">,90</span>
-                            </div>
-                            <p className="text-sm text-muted-foreground">pagamento único</p>
-                            <div className="flex justify-center pt-2">
-                               <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
-                                   <Sparkles className="w-4 h-4 mr-1"/> Economize R$ 167,00
-                               </Badge>
-                            </div>
                         </CardHeader>
-                        <CardContent className="space-y-4 pt-4">
-                             <ul className="space-y-3">
-                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /><span className="font-bold text-primary">Tudo do Plano Básico</span></li>
-                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Minicurso</li>
-                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes de Frutas</li>
-                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Galinha Pintadinha</li>
-                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Lilo Stitch</li>
-                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Wandinha</li>
-                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Seu Lobato</li>
-                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-red-500" /> 2 Bônus Exclusivos</li>
-                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-red-500" /> 600 Moldes Atualizados</li>
-                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-red-500" /> 1500 Moldes Variados</li>
+                        <CardContent className="space-y-4 p-6 pt-2">
+                             <ul className="space-y-3 text-sm">
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /><span className="font-bold">Tudo do Plano Básico</span></li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Minicurso</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes de Frutas</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Galinha Pintadinha</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Lilo Stitch</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Wandinha</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Seu Lobato</li>
+                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> Bônus Exclusivos</li>
                             </ul>
-                            <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-lg py-6 shadow-lg">
-                                Garantir Meu Acesso Agora! <PartyPopper className="w-5 h-5 ml-2"/>
+                           <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base py-6 rounded-lg">
+                                Eu quero o acesso premium!
                             </Button>
                         </CardContent>
                     </Card>
@@ -260,7 +248,7 @@ export default function Home() {
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index}>
-                    <Card className="border-none shadow-none">
+                    <Card className="border-none shadow-none bg-transparent">
                       <CardContent className="flex flex-col items-center text-center p-6">
                         <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
                            <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint="person face" />
@@ -317,9 +305,9 @@ export default function Home() {
         </section>
 
         {/* Final CTA Section */}
-        <section id="cta-final" className="py-24 text-center bg-gray-800" style={{backgroundImage: 'url(https://www.transparenttextures.com/patterns/fabric-of-squares.png)', backgroundBlendMode: 'overlay', backgroundColor: 'hsl(var(--foreground))'}}>
+        <section id="cta-final" className="py-24 text-center bg-primary">
            <div className="container px-4 mx-auto">
-             <h2 className="text-3xl md:text-5xl font-bold text-background mb-8">Pronta para Desbloquear Sua Criatividade?</h2>
+             <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-8">Pronta para Desbloquear Sua Criatividade?</h2>
               <a href="#planos">
                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
                 Quero Meus Moldes! 🎨
@@ -337,3 +325,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

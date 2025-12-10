@@ -35,6 +35,7 @@ import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import PurchaseNotification from "@/components/landing-page/purchase-notification";
+import SpecialOfferPopup from "@/components/landing-page/special-offer-popup";
 
 const categories = [
   { name: "Flores", icon: Flower2 },
@@ -109,6 +110,21 @@ const kitContents = [
 
 export default function Home() {
   const [isHeaderVisible, setIsHeaderVisible] = React.useState(true);
+  const [isOfferPopupOpen, setIsOfferPopupOpen] = React.useState(false);
+
+  const handleAcceptOffer = () => {
+    // Lógica para redirecionar para o checkout premium
+    console.log("Oferta aceita! Redirecionando para checkout premium.");
+    setIsOfferPopupOpen(false);
+    // window.location.href = '#'; // Link de checkout premium
+  };
+
+  const handleDeclineOffer = () => {
+    // Lógica para redirecionar para o checkout básico
+    console.log("Oferta recusada. Redirecionando para checkout básico.");
+    setIsOfferPopupOpen(false);
+    // window.location.href = '#'; // Link de checkout básico
+  };
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -218,7 +234,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
-                             <Button size="lg" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-base py-6 rounded-lg">
+                             <Button size="lg" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-base py-6 rounded-lg" onClick={() => setIsOfferPopupOpen(true)}>
                                 Comprar Agora
                             </Button>
                         </CardContent>
@@ -350,13 +366,16 @@ export default function Home() {
 
       <PurchaseNotification />
 
+      <SpecialOfferPopup
+        open={isOfferPopupOpen}
+        onOpenChange={setIsOfferPopupOpen}
+        onAccept={handleAcceptOffer}
+        onDecline={handleDeclineOffer}
+      />
+
       <footer className="text-center p-6 bg-secondary/50">
         <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} EVA Template Pro. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
 }
-
-    
-
-    

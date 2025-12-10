@@ -108,11 +108,11 @@ const kitContents = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold fixed top-0 w-full z-50">
+      <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold">
         ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
       </header>
       
-      <main className="flex-grow mt-10">
+      <main className="flex-grow">
         {/* Hero Section */}
         <section id="home" className="py-16 md:py-24 text-center">
           <div className="container px-4 mx-auto">
@@ -126,7 +126,7 @@ export default function Home() {
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
             </div>
             <a href="#planos">
-              <Button size="lg" className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
                 VER OS PLANOS
               </Button>
             </a>

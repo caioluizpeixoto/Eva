@@ -17,7 +17,12 @@ import {
   Star,
   Heart,
   Shapes,
-  Apple
+  Apple,
+  Crown,
+  Sparkles,
+  PartyPopper,
+  Check,
+  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -111,8 +116,8 @@ export default function Home() {
         {/* Hero Section */}
         <section id="home" className="py-16 md:py-24 text-center">
           <div className="container px-4 mx-auto">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 text-foreground animate-fade-in-up">
-              Você está <span className="text-primary">cansada</span> de passar horas procurando moldes de EVA?
+          <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 text-foreground animate-fade-in-up">
+              Você está <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">
               O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10,00</span>
@@ -169,56 +174,76 @@ export default function Home() {
 
         {/* Pricing Section */}
         <section id="planos" className="py-16 md:py-24 bg-secondary">
-          <div className="container px-4 mx-auto">
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
-              {/* Basic Plan */}
-              <Card className="w-full max-w-md shadow-lg transform lg:scale-95">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-3xl font-bold">Plano Básico</CardTitle>
-                  <CardDescription className="text-lg">
-                    <span className="line-through text-muted-foreground">De R$97,00</span> por
-                  </CardDescription>
-                  <p className="text-5xl font-bold text-primary my-2">R$10,00</p>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-accent" /> Acesso vitalício</li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-accent" /> 2000+ moldes</li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-accent" /> Downloads ilimitados</li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-accent" /> Garantia de 7 dias</li>
-                  </ul>
-                  <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6">
-                    Garantir Meu Acesso Agora!
-                  </Button>
-                </CardContent>
-              </Card>
+            <div className="container px-4 mx-auto">
+                <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+                    {/* Basic Plan */}
+                    <Card className="w-full max-w-md shadow-lg transform lg:scale-95">
+                        <CardHeader className="text-center pb-2">
+                            <CardTitle className="text-3xl font-bold">Plano Básico</CardTitle>
+                            <CardDescription className="text-lg pt-2">
+                                <span className="line-through text-muted-foreground">De R$97,00</span>
+                            </CardDescription>
+                            <p className="text-sm text-muted-foreground">Por apenas</p>
+                            <p className="text-5xl font-bold text-primary">
+                                R$10<span className="text-3xl align-super">,00</span>
+                            </p>
+                            <p className="text-sm text-muted-foreground">pagamento único</p>
+                        </CardHeader>
+                        <CardContent className="space-y-4 pt-4">
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> Acesso vitalício</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> 2000+ moldes</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> Downloads ilimitados</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-500" /> Garantia de 7 dias</li>
+                            </ul>
+                            <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6">
+                                Garantir Meu Acesso Agora!
+                            </Button>
+                        </CardContent>
+                    </Card>
 
-              {/* Premium Plan */}
-              <Card className="w-full max-w-md shadow-2xl border-2 border-primary relative overflow-visible transform lg:scale-105">
-                <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 text-sm font-bold">MAIS VENDIDO</Badge>
-                <CardHeader className="text-center pt-10">
-                  <CardTitle className="text-3xl font-bold">Plano Premium</CardTitle>
-                  <CardDescription className="text-lg">
-                    <span className="line-through text-muted-foreground">De R$197,00</span> por
-                  </CardDescription>
-                  <p className="text-5xl font-bold text-primary my-2">R$29,90</p>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-primary" /> <span className="font-bold text-foreground">Tudo do Básico +</span></li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-primary" /> Minicurso exclusivo</li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-primary" /> Moldes extras (Frutas, Galinha Pintadinha, etc.)</li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-primary" /> 600 moldes atualizados</li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-primary" /> 1500 moldes variados</li>
-                    <li className="flex items-center gap-2"><BadgeCheck className="w-5 h-5 text-primary" /> 2 bônus exclusivos</li>
-                  </ul>
-                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-6 shadow-lg">
-                    Garantir Meu Acesso Agora!
-                  </Button>
-                </CardContent>
-              </Card>
+                    {/* Premium Plan */}
+                    <Card className="w-full max-w-md shadow-2xl border-2 border-primary relative overflow-visible transform lg:scale-105">
+                        <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-400 to-red-500 text-white px-4 py-1.5 text-sm font-bold rounded-full flex items-center gap-2">
+                            <Crown className="w-4 h-4" /> MAIS VENDIDO
+                        </Badge>
+                        <CardHeader className="text-center pt-10 pb-2">
+                            <CardTitle className="text-3xl font-bold">Premium</CardTitle>
+                            <CardDescription className="text-lg pt-2">
+                                <span className="line-through text-muted-foreground">De R$197,00</span>
+                            </CardDescription>
+                            <p className="text-sm text-muted-foreground">Por apenas</p>
+                            <div>
+                                <span className="text-5xl font-bold text-primary align-middle">R$ 29</span>
+                                <span className="text-3xl font-bold text-primary align-super">,90</span>
+                            </div>
+                            <p className="text-sm text-muted-foreground">pagamento único</p>
+                            <div className="flex justify-center pt-2">
+                               <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
+                                   <Sparkles className="w-4 h-4 mr-1"/> Economize R$ 167,00
+                               </Badge>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="space-y-4 pt-4">
+                             <ul className="space-y-3">
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /><span className="font-bold text-primary">Tudo do Plano Básico</span></li>
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Minicurso</li>
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes de Frutas</li>
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Galinha Pintadinha</li>
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Lilo Stitch</li>
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Wandinha</li>
+                                <li className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Moldes Seu Lobato</li>
+                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-red-500" /> 2 Bônus Exclusivos</li>
+                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-red-500" /> 600 Moldes Atualizados</li>
+                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-red-500" /> 1500 Moldes Variados</li>
+                            </ul>
+                            <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-lg py-6 shadow-lg">
+                                Garantir Meu Acesso Agora! <PartyPopper className="w-5 h-5 ml-2"/>
+                            </Button>
+                        </CardContent>
+                    </Card>
+                </div>
             </div>
-          </div>
         </section>
         
         {/* Testimonials Section */}

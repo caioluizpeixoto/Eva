@@ -112,7 +112,7 @@ export default function Home() {
         <section id="home" className="py-16 md:py-24 text-center">
           <div className="container px-4 mx-auto">
             <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 text-foreground animate-fade-in-up">
-              Você está <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">cansada</span> de passar horas procurando moldes de EVA?
+              Você está <span className="text-primary">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">
               O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10,00</span>
@@ -136,7 +136,7 @@ export default function Home() {
               {categories.map((category) => (
                 <div key={category.name} className="flex flex-col items-center gap-3 animate-fade-in-up">
                   <div className="bg-background p-4 rounded-full shadow-md">
-                    <category.icon className="w-8 h-8 text-accent" />
+                    <category.icon className="w-8 h-8 text-primary" />
                   </div>
                   <p className="font-semibold text-foreground">{category.name}</p>
                 </div>

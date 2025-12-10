@@ -188,7 +188,7 @@ export default function Home() {
                          <CardHeader className="text-center pb-4 pt-8">
                             <CardTitle className="text-2xl font-bold">Acesso Imediato</CardTitle>
                              <p className="text-4xl font-bold text-primary pt-2">
-                                R$10<span className="text-2xl align-super">,00</span>
+                                R$9<span className="text-2xl align-super">,99</span>
                             </p>
                             <CardDescription className="text-sm">
                                 Pagamento único

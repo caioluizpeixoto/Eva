@@ -94,6 +94,15 @@ const testimonials = [
   },
 ];
 
+const feedbackImages = [
+    'https://i.postimg.cc/mtQc8cLC/Captura-de-tela-2025-12-10-194110.png',
+    'https://i.postimg.cc/F7jfDfrk/Captura-de-tela-2025-12-10-194126.png',
+    'https://i.postimg.cc/PPmL2LXC/Captura-de-tela-2025-12-10-194144.png',
+    'https://i.postimg.cc/2V4q2qkq/Captura-de-tela-2025-12-10-194200.png',
+    'https://i.postimg.cc/6yd7Y7WG/Captura-de-tela-2025-12-10-194214.png',
+    'https://i.postimg.cc/ykqgmhHF/Captura-de-tela-2025-12-10-194244.png'
+];
+
 const kitContents = [
   { item: "Moldes de flores", details: "(rosas, margaridas, girassóis, etc.)", icon: Flower2 },
   { item: "Alfabeto completo", details: "em vários estilos", icon: CaseUpper },
@@ -108,7 +117,6 @@ const kitContents = [
 ];
 
 export default function Home() {
-  const [isHeaderVisible, setIsHeaderVisible] = React.useState(true);
   const [isOfferPopupOpen, setIsOfferPopupOpen] = React.useState(false);
 
   const handleAcceptOffer = () => {
@@ -165,7 +173,7 @@ export default function Home() {
                   <p className="font-semibold text-foreground">{category.name}</p>
                 </div>
               ))}
-                <div className="flex flex-col items-center gap-3 animate-fade-in-up justify-center col-span-full md:col-span-1">
+                <div className="flex flex-col items-center justify-center col-span-full animate-fade-in-up">
                   <p className="font-semibold text-foreground mt-0">E muito mais!</p>
                 </div>
             </div>
@@ -263,26 +271,22 @@ export default function Home() {
         <section id="depoimentos" className="py-16 md:py-24">
           <div className="container px-4 mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">Quem Comprou, Amou!</h2>
-            <Carousel opts={{ loop: true }} className="max-w-2xl mx-auto">
+            <Carousel opts={{ loop: true, align: "center" }} className="w-full max-w-md mx-auto">
               <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index}>
-                    <Card className="border-none shadow-none bg-transparent">
-                      <CardContent className="flex flex-col items-center text-center p-6">
-                        <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
-                           <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint="person face" />
-                           <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
-                        </Avatar>
-                        <p className="font-bold text-xl text-foreground">{testimonial.name}</p>
-                        <p className="text-sm text-primary mb-4">{testimonial.title}</p>
-                        <p className="text-muted-foreground italic">"{testimonial.text}"</p>
-                      </CardContent>
-                    </Card>
+                {feedbackImages.map((src, index) => (
+                  <CarouselItem key={index} className="flex justify-center">
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden rounded-lg">
+                           <Image src={src} alt={`Feedback ${index + 1}`} width={400} height={400} className="object-contain" data-ai-hint="feedback screenshot" />
+                        </CardContent>
+                      </Card>
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-0 -translate-x-1/2" />
-              <CarouselNext className="right-0 translate-x-1/2" />
+              <CarouselPrevious className="-left-4" />
+              <CarouselNext className="-right-4" />
             </Carousel>
           </div>
         </section>
@@ -359,3 +363,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

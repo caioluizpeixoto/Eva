@@ -119,7 +119,10 @@ export default function Home() {
               O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
             </p>
             <div className="max-w-lg mx-auto my-8 aspect-[9/16] bg-secondary rounded-lg border-4 border-muted shadow-lg animate-zoom-in overflow-hidden relative">
-              <iframe src="https://player.vimeo.com/video/1145406928?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" title="Kit 2 Mil Moldes de EVA - Oferta Especial" className="absolute top-0 left-0 w-full h-full"></iframe>
+              <div 
+                // @ts-ignore
+                dangerouslySetInnerHTML={{ __html: `<wistia-player media-id="n1pj3f7c1k" wistia-popover="true" aspect="0.75" style="width:100%;height:100%;"></wistia-player>` }}
+              />
             </div>
             <a href="#planos">
               <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">

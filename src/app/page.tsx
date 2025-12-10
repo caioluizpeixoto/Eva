@@ -69,6 +69,7 @@ const feedbackImages = [
     'https://i.postimg.cc/zXQnDW4F/Captura-de-tela-2025-12-10-194144.png',
     'https://i.postimg.cc/KvWncLC5/Captura-de-tela-2025-12-10-194200.png',
     'https://i.postimg.cc/28t4jvgT/Captura-de-tela-2025-12-10-194214.png',
+    'https://i.postimg.cc/xT8vSgpF/Captura-de-tela-2025-12-10-194244.png',
 ];
 
 const kitContents = [

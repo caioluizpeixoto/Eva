@@ -104,15 +104,15 @@ export default function Home() {
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
-        <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold fixed top-0 left-0 right-0 z-50">
-          ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
-        </header>
       
-      <main className="flex-grow pt-10">
+      <main className="flex-grow">
         {/* Hero Section */}
         <section id="home" className="py-16 md:py-24 text-center">
           <div className="container px-4 mx-auto">
-          <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 text-foreground animate-fade-in-up">
+            <div className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold mb-8 rounded-md">
+              ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
+            </div>
+            <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 text-foreground animate-fade-in-up">
               Você está <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">

@@ -99,7 +99,7 @@ export default function Home() {
     // Lógica para redirecionar para o checkout básico
     console.log("Oferta recusada. Redirecionando para checkout básico.");
     setIsOfferPopupOpen(false);
-    window.location.href = 'https://pay.kirvano.com/3dd7c081-3c48-4395-9776-8051c5b81f18'; // Link de checkout básico
+    window.location.href = 'https://www.ggcheckout.com/checkout/v2/bp4wlzNrTqlCmZOXDJyg'; // Link de checkout básico
   };
   
   return (

@@ -124,29 +124,12 @@ export default function Home() {
     setIsOfferPopupOpen(false);
     // window.location.href = '#'; // Link de checkout básico
   };
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const isTop = window.scrollY < 50;
-      if (isTop !== isHeaderVisible) {
-        setIsHeaderVisible(isTop);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isHeaderVisible]);
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      {isHeaderVisible && (
         <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold">
           ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
         </header>
-      )}
       
       <main className="flex-grow">
         {/* Hero Section */}
@@ -162,7 +145,7 @@ export default function Home() {
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
             </div>
             <a href="#planos">
-              <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground">
+              <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">
                 VER OS PLANOS
               </Button>
             </a>
@@ -233,7 +216,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
-                             <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground" onClick={() => setIsOfferPopupOpen(true)}>
+                             <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground" onClick={() => setIsOfferPopupOpen(true)}>
                                 Comprar Agora
                             </Button>
                         </CardContent>
@@ -266,7 +249,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
-                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground">
+                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">
                                 Eu quero o acesso premium!
                                 <PartyPopper className="ml-2" />
                             </Button>
@@ -354,7 +337,7 @@ export default function Home() {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">Pronta para desafiar sua criatividade?</span>
                 </h2>
                 <a href="#planos">
-                <Button size="lg" className="text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground animate-pulse">
+                <Button size="lg" className="text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground animate-pulse">
                     Quero Meus Moldes! <PartyPopper className="ml-2" />
                 </Button>
                 </a>

@@ -104,11 +104,11 @@ export default function Home() {
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
-        <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold">
+        <header className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold fixed top-0 left-0 right-0 z-50">
           ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
         </header>
       
-      <main className="flex-grow">
+      <main className="flex-grow pt-10">
         {/* Hero Section */}
         <section id="home" className="py-16 md:py-24 text-center">
           <div className="container px-4 mx-auto">

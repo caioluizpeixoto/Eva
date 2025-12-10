@@ -229,7 +229,9 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Lilo Stitch</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Wandinha</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Moldes Seu Lobato</li>
-                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> Bônus Exclusivos</li>
+                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 2 Bônus Exclusivos</li>
+                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
+                                <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
                            <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-base py-6 rounded-lg">
                                 Eu quero o acesso premium!

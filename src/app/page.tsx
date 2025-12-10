@@ -146,12 +146,9 @@ export default function Home() {
                   <p className="font-semibold text-foreground">{category.name}</p>
                 </div>
               ))}
-                <div className="flex flex-col items-center gap-3 animate-fade-in-up">
-                  <div className="bg-background p-4 rounded-full shadow-md">
-                    <MoreHorizontal className="w-8 h-8 text-primary" />
-                  </div>
-                  <p className="font-semibold text-foreground">E muito mais!</p>
-                </div>
+            </div>
+            <div className="text-center mt-8 animate-fade-in-up">
+                <p className="font-semibold text-foreground">E muito mais!</p>
             </div>
           </div>
         </section>

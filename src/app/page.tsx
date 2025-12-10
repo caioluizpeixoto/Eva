@@ -3,37 +3,30 @@
 import React from "react";
 import Image from "next/image";
 import {
-  BadgeCheck,
   Binary,
   BookOpen,
-  Cat,
   CaseUpper,
+  Cat,
   Clock,
+  Crown,
   Download,
   Flower2,
   Folder,
   Gift,
-  MoreHorizontal,
+  PartyPopper,
   PlayCircle,
   Rabbit,
   ShieldCheck,
-  Star,
-  Heart,
   Shapes,
   Apple,
-  Crown,
-  Sparkles,
-  PartyPopper,
-  Check,
   CheckCircle2,
   Users,
+  Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import SpecialOfferPopup from "@/components/landing-page/special-offer-popup";
 
 const categories = [
@@ -70,37 +63,8 @@ const benefits = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Ana Clara",
-    title: "Artesã",
-    avatar: PlaceHolderImages.find(p => p.id === 'testimonial1')?.imageUrl,
-    avatarFallback: "AC",
-    text: "Estou maravilhada com a quantidade e a qualidade dos moldes. Facilitou muito meu trabalho no ateliê. O preço é inacreditável!",
-  },
-  {
-    name: "Juliana Santos",
-    title: "Professora",
-    avatar: PlaceHolderImages.find(p => p.id === 'testimonial2')?.imageUrl,
-    avatarFallback: "JS",
-    text: "Uso os moldes para atividades com meus alunos. Eles adoram! A variedade é imensa e cobre todas as datas comemorativas.",
-  },
-  {
-    name: "Márcia Lima",
-    title: "Mãe e Empreendedora",
-    avatar: PlaceHolderImages.find(p => p.id === 'testimonial3')?.imageUrl,
-    avatarFallback: "ML",
-    text: "Comecei a vender peças de EVA e esse kit foi meu maior investimento. Custo-benefício excelente. Recomendo de olhos fechados!",
-  },
-];
-
 const feedbackImages = [
-    'https://i.postimg.cc/mtQc8cLC/Captura-de-tela-2025-12-10-194110.png',
-    'https://i.postimg.cc/F7jfDfrk/Captura-de-tela-2025-12-10-194126.png',
-    'https://i.postimg.cc/PPmL2LXC/Captura-de-tela-2025-12-10-194144.png',
-    'https://i.postimg.cc/2V4q2qkq/Captura-de-tela-2025-12-10-194200.png',
-    'https://i.postimg.cc/6yd7Y7WG/Captura-de-tela-2025-12-10-194214.png',
-    'https://i.postimg.cc/ykqgmhHF/Captura-de-tela-2025-12-10-194244.png'
+    'https://i.postimg.cc/WbyMprxW/Captura-de-tela-2025-12-10-194110.png',
 ];
 
 const kitContents = [
@@ -123,14 +87,14 @@ export default function Home() {
     // Lógica para redirecionar para o checkout premium
     console.log("Oferta aceita! Redirecionando para checkout premium.");
     setIsOfferPopupOpen(false);
-    // window.location.href = '#'; // Link de checkout premium
+    window.location.href = 'https://pay.kirvano.com/3dd7c081-3c48-4395-9776-8051c5b81f18'; // Link de checkout premium
   };
 
   const handleDeclineOffer = () => {
     // Lógica para redirecionar para o checkout básico
     console.log("Oferta recusada. Redirecionando para checkout básico.");
     setIsOfferPopupOpen(false);
-    // window.location.href = '#'; // Link de checkout básico
+    window.location.href = 'https://pay.kirvano.com/3dd7c081-3c48-4395-9776-8051c5b81f18'; // Link de checkout básico
   };
   
   return (
@@ -150,7 +114,9 @@ export default function Home() {
               O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
             </p>
             <div className="max-w-4xl mx-auto my-8 aspect-video bg-secondary rounded-lg flex items-center justify-center border-4 border-muted shadow-lg animate-zoom-in">
-              <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
+                <a href="https://youtu.be/zSj_4a1fA2g" target="_blank" rel="noopener noreferrer">
+                    <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50 hover:opacity-80 transition-opacity" />
+                </a>
             </div>
             <a href="#planos">
               <Button size="lg" className="text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">
@@ -257,10 +223,12 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
-                           <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">
-                                Eu quero o acesso premium!
-                                <PartyPopper className="ml-2" />
-                            </Button>
+                           <a href="https://pay.kirvano.com/3dd7c081-3c48-4395-9776-8051c5b81f18">
+                                <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">
+                                    Eu quero o acesso premium!
+                                    <PartyPopper className="ml-2" />
+                                </Button>
+                            </a>
                         </CardContent>
                     </Card>
                 </div>

@@ -126,8 +126,9 @@ export default function Home() {
               <PlayCircle className="w-20 h-20 text-muted-foreground opacity-50" />
             </div>
             <a href="#planos">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+              <Button size="lg" className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl font-bold py-8 px-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
                 VER OS PLANOS
+                <PartyPopper className="ml-2" />
               </Button>
             </a>
           </div>
@@ -200,8 +201,9 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Downloads ilimitados</li>
                                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-primary" /> Garantia de 7 dias</li>
                             </ul>
-                             <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-base py-6 rounded-lg">
+                             <Button size="lg" className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-base py-6 rounded-lg">
                                 Comprar Agora
+                                <PartyPopper className="ml-2" />
                             </Button>
                         </CardContent>
                     </Card>
@@ -311,8 +313,8 @@ export default function Home() {
                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">Pronta para Desbloquear Sua Criatividade?</span>
              </h2>
               <a href="#planos">
-               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
-                Quero Meus Moldes! 🎨
+               <Button size="lg" className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
+                Quero Meus Moldes! <PartyPopper className="ml-2" />
                </Button>
              </a>
            </div>

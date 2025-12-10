@@ -23,6 +23,7 @@ import {
   PartyPopper,
   Check,
   CheckCircle2,
+  Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -37,11 +38,10 @@ const categories = [
   { name: "Letras", icon: CaseUpper },
   { name: "Números", icon: Binary },
   { name: "Animais", icon: Cat },
-  { name: "Personagens", icon: "Users" },
+  { name: "Personagens", icon: Users },
   { name: "Temas Bíblicos", icon: BookOpen },
   { name: "Natal", icon: Gift },
   { name: "Páscoa", icon: Rabbit },
-  { name: "E muito mais!", icon: MoreHorizontal },
 ];
 
 const benefits = [
@@ -97,7 +97,7 @@ const kitContents = [
   { item: "Números diversos", details: "para todas as finalidades", icon: Binary },
   { item: "Animais", details: "(fazenda, selvagens, marinhos)", icon: Cat },
   { item: "Frutas", details: "para decoração e aprendizado", icon: Apple },
-  { item: "Personagens", details: "clássicos e atuais", icon: "Users" },
+  { item: "Personagens", details: "clássicos e atuais", icon: Users },
   { item: "Temas bíblicos", details: "para eventos religiosos", icon: BookOpen },
   { item: "Natal", details: "papai noel, renas, árvores e mais", icon: Gift },
   { item: "Páscoa", details: "coelhos, ovos e cenouras", icon: Rabbit },
@@ -137,7 +137,7 @@ export default function Home() {
         <section id="categorias" className="py-16 bg-secondary">
           <div className="container px-4 mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">Moldes para Todas as Ocasiões</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center justify-center">
               {categories.map((category) => (
                 <div key={category.name} className="flex flex-col items-center gap-3 animate-fade-in-up">
                   <div className="bg-background p-4 rounded-full shadow-md">
@@ -146,6 +146,12 @@ export default function Home() {
                   <p className="font-semibold text-foreground">{category.name}</p>
                 </div>
               ))}
+                <div className="flex flex-col items-center gap-3 animate-fade-in-up">
+                  <div className="bg-background p-4 rounded-full shadow-md">
+                    <MoreHorizontal className="w-8 h-8 text-primary" />
+                  </div>
+                  <p className="font-semibold text-foreground">E muito mais!</p>
+                </div>
             </div>
           </div>
         </section>

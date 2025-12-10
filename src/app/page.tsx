@@ -228,7 +228,7 @@ export default function Home() {
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 600 Moldes Atualizados</li>
                                 <li className="flex items-center gap-2"><Gift className="w-5 h-5 text-primary" /> 1500 Moldes Variados</li>
                             </ul>
-                           <a href="https://pay.kirvano.com/3dd7c081-3c48-4395-9776-8051c5b81f18">
+                           <a href="https://www.ggcheckout.com/checkout/v2/HJxiJelw3SKY5CCEHx8Q">
                                 <Button size="lg" className="w-full font-bold text-base py-6 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 text-primary-foreground">
                                     Eu quero o acesso premium!
                                     <PartyPopper className="ml-2" />

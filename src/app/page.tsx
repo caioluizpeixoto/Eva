@@ -277,7 +277,7 @@ export default function Home() {
                   <CarouselItem key={index} className="flex justify-center">
                     <div className="p-1">
                       <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden rounded-lg">
+                        <CardContent className="flex aspect-square items-center justify-center p-4 overflow-hidden rounded-lg">
                            <Image src={src} alt={`Feedback ${index + 1}`} width={400} height={400} className="object-contain" data-ai-hint="feedback screenshot" />
                         </CardContent>
                       </Card>
@@ -363,5 +363,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

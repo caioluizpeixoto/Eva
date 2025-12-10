@@ -121,7 +121,7 @@ export default function Home() {
             <div className="max-w-lg mx-auto my-8 aspect-[9/16] bg-secondary rounded-lg border-4 border-muted shadow-lg animate-zoom-in overflow-hidden relative">
               <div 
                 // @ts-ignore
-                dangerouslySetInnerHTML={{ __html: `<wistia-player media-id="n1pj3f7c1k" wistia-popover="true" aspect="0.75" style="width:100%;height:100%;"></wistia-player>` }}
+                dangerouslySetInnerHTML={{ __html: `<wistia-player media-id="n1pj3f7c1k" aspect="0.75" style="width:100%;height:100%;"></wistia-player>` }}
               />
             </div>
             <a href="#planos">

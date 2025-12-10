@@ -183,7 +183,7 @@ export default function Home() {
             <div className="container px-4 mx-auto">
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
                     {/* Basic Plan */}
-                    <Card className="w-full max-w-sm shadow-lg rounded-2xl bg-white text-gray-800">
+                    <Card className="w-full max-w-sm shadow-lg rounded-2xl bg-card text-card-foreground border-2 border-transparent">
                          <CardHeader className="text-center pb-4 pt-8">
                             <CardTitle className="text-2xl font-bold">Acesso Imediato</CardTitle>
                              <p className="text-4xl font-bold text-primary pt-2">
@@ -207,7 +207,7 @@ export default function Home() {
                     </Card>
 
                     {/* Premium Plan */}
-                    <Card className="w-full max-w-sm shadow-2xl border-2 border-primary rounded-2xl bg-white text-gray-800 relative">
+                    <Card className="w-full max-w-sm shadow-2xl border-2 border-primary rounded-2xl bg-card text-card-foreground relative">
                          <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1.5 text-sm font-bold rounded-full flex items-center gap-2">
                             <Crown className="w-4 h-4" /> MAIS VENDIDO
                         </Badge>
@@ -307,7 +307,9 @@ export default function Home() {
         {/* Final CTA Section */}
         <section id="cta-final" className="py-24 text-center bg-primary">
            <div className="container px-4 mx-auto">
-             <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-8">Pronta para Desbloquear Sua Criatividade?</h2>
+             <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-8">
+               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">Pronta para Desbloquear Sua Criatividade?</span>
+             </h2>
               <a href="#planos">
                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl md:text-2xl font-bold py-8 px-10 md:px-16 rounded-lg shadow-lg transform hover:scale-105 transition-transform animate-pulse">
                 Quero Meus Moldes! 🎨
@@ -325,5 +327,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

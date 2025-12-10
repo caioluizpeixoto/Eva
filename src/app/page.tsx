@@ -106,20 +106,27 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background">
       
       <main className="flex-grow">
+        {/* Animated Offer Bar */}
+        <div className="bg-primary text-primary-foreground overflow-hidden whitespace-nowrap">
+          <div className="animate-marquee inline-block py-2">
+            <span className="text-sm md:text-base font-bold mx-8">✨ Oferta Válida Somente Hoje (10/12/2025) ✨</span>
+            <span className="text-sm md:text-base font-bold mx-8">✨ Oferta Válida Somente Hoje (10/12/2025) ✨</span>
+            <span className="text-sm md:text-base font-bold mx-8">✨ Oferta Válida Somente Hoje (10/12/2025) ✨</span>
+            <span className="text-sm md:text-base font-bold mx-8">✨ Oferta Válida Somente Hoje (10/12/2025) ✨</span>
+          </div>
+        </div>
+        
         {/* Hero Section */}
         <section id="home" className="py-16 md:py-24 text-center">
           <div className="container px-4 mx-auto">
-            <div className="bg-primary text-primary-foreground text-center p-2 text-sm md:text-base font-bold mb-8 rounded-md">
-              ✨ Oferta Válida Somente Hoje (10/12/2025) ✨
-            </div>
             <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 text-foreground animate-fade-in-up">
               Você está <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">cansada</span> de passar horas procurando moldes de EVA?
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-300">
               O kit com mais de <span className="font-bold text-primary">2 mil moldes</span> está sendo liberado por apenas <span className="font-bold text-primary">R$10</span>
             </p>
-            <div className="max-w-lg mx-auto my-8 aspect-[9/16] bg-secondary rounded-lg border-4 border-muted shadow-lg animate-zoom-in overflow-hidden relative">
-              <div 
+            <div className="max-w-lg mx-auto my-8 aspect-w-9 aspect-h-16 bg-secondary rounded-lg border-4 border-muted shadow-lg animate-zoom-in overflow-hidden relative">
+               <div 
                 // @ts-ignore
                 dangerouslySetInnerHTML={{ __html: `<wistia-player media-id="n1pj3f7c1k" aspect="0.75" style="width:100%;height:100%;"></wistia-player>` }}
               />
